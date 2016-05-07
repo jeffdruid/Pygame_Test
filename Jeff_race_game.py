@@ -33,6 +33,8 @@ carImg = pygame.image.load("car.png")
 gameIcon = pygame.image.load("icon.png")
 pygame.display.set_icon(gameIcon)
 
+background = pygame.image.load("background.png")
+
 pause = False
 
 def things_dodged(count):
@@ -196,6 +198,7 @@ def game_loop():
         x += x_change
 
         gameDisplay.fill(white)
+        gameDisplay.blit(background,(0,0))
 
         things(thing_startx, thing_starty, thing_width, thing_height, block_color)
         thing_starty += thing_speed
